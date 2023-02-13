@@ -1,12 +1,9 @@
 from pytube import YouTube
 from tqdm import tqdm
 
+textcolor = '\033[94m'
 
-class BColors:
-    textcolor = '\033[94m'
-
-
-print(BColors.textcolor, (("""\
+print(textcolor, (("""\
 
  __     __         _         _            _____                      _                 _           
  \ \   / /        | |       | |          |  __ \                    | |               | |          
@@ -20,7 +17,7 @@ print(BColors.textcolor, (("""\
 video_url = input("Enter The URL of A Youtube Video: ")
 yt = YouTube(str(video_url))
 views = ('{:,}'.format(yt.views))
-print("Title: " + "'" + yt.title + '\n' + "Autor: " + str(yt.author) + '\n' + "Views: " + str(views) + '\n\n' + "Would you like to download the video?" + '\n' + "1.) Yes" + '\n' + "2.) No")
+print("Title: " + "'" + yt.title + "'" + '\n' + "Autor: " + str(yt.author) + '\n' + "Views: " + str(views) + '\n\n' + "Would you like to download the video?" + '\n' + "1.) Yes" + '\n' + "2.) No")
 
 option = input("Please choose an option: ")
 
